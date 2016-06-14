@@ -1,0 +1,20 @@
+///////////////////////////////////////////////
+// STICKY FOOTER
+// =========================
+
+=sticky-footer($wrap-name, $footer-mobile-height, $footer-lap-height)
+	.#{$wrap-name}
+		min-height: 100%
+		margin-bottom: -$footer-mobile-height
+
+		&:after
+			content: ''
+			display: block
+			height: $footer-mobile-height
+
+
+		+media-query(lap)
+			margin-bottom: -$footer-lap-height
+
+			&:after
+				height: $footer-lap-height
