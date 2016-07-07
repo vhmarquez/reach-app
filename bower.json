@@ -1,12 +1,12 @@
 {
-  "name": "reach",
-  "description": "Reach Starter Structure",
+  "name": "Reach App Structure",
+  "description": "Application Structure",
   "main": "",
   "authors": [
-    "Victor Marquez <victormarquez.dev@gmail.com>"
+    "Victor Marquez <victor@designzillas.com>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/vhmarquez/Reach",
+  "homepage": "",
   "private": true,
   "ignore": [
     "**/.*",

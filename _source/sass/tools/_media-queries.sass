@@ -4,6 +4,10 @@
 
 =mq($breakpoint)
 
+	@if $breakpoint == palm
+		@media screen and (min-width: $palm-start)
+			@content
+
 	@if $breakpoint == lap
 		@media screen and (min-width: $lap-start)
 			@content

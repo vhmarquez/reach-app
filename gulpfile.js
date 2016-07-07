@@ -6,7 +6,7 @@ const	GULP = require('gulp');
 const	WATCH = require('gulp-watch');
 const	RENAME = require('gulp-rename');
 const	SASS = require('gulp-compass');
-const	MINCSS = require('gulp-minify-css');
+const	MINCSS = require('gulp-clean-css');
 const	JSUGLIFY = require('gulp-uglify');
 const	JSCONCAT = require('gulp-concat');
 const	IMAGEMIN = require('gulp-imagemin');
@@ -42,7 +42,10 @@ GULP.task('sass-prod', function() {
 		}))
 		.pipe(GULP.dest('_source/css'))
 		.pipe(RENAME({suffix: '.min'}))
-		.pipe(MINCSS())
+		.pipe(MINCSS({debug: true}, function(details) {
+            console.log(details.name + ': ' + details.stats.originalSize);
+            console.log(details.name + ': ' + details.stats.minifiedSize);
+        }))
 		.pipe(GULP.dest('_html/_css'));
 });
 

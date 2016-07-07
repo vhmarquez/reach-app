@@ -1,4 +1,4 @@
-# Reach Starter Structure
+# Reach App Structure
 
 ### Set up instructions
 
