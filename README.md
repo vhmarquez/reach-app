@@ -13,7 +13,7 @@
   - This will install GulpJS and Bower dependencies
 
 #### Folder Structure
-'''
+```
 _html
 -> _css
 -> _js
@@ -21,4 +21,4 @@ _source
 -> css
 -> js
 -> sass
-'''
+```
