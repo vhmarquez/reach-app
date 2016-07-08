@@ -42,10 +42,7 @@ GULP.task('sass-prod', function() {
 		}))
 		.pipe(GULP.dest('_source/css'))
 		.pipe(RENAME({suffix: '.min'}))
-		.pipe(MINCSS({debug: true}, function(details) {
-            console.log(details.name + ': ' + details.stats.originalSize);
-            console.log(details.name + ': ' + details.stats.minifiedSize);
-        }))
+		.pipe(MINCSS())
 		.pipe(GULP.dest('_html/_css'));
 });
 
